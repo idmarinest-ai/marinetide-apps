@@ -125,6 +125,10 @@ with st.sidebar:
 # MAIN DASHBOARD CONTENT
 # ==========================================
 
+# ==========================================
+# MAIN DASHBOARD CONTENT
+# ==========================================
+
 # 1. Hero Section
 if not file:
     st.markdown("""
@@ -136,13 +140,14 @@ if not file:
         </div>
     """, unsafe_allow_html=True)
     
-    # Berikan angka agar kolom kiri lebih lebar dari kolom kanan
-    col1, col2 = st.columns() 
+    # PERBAIKAN DI SINI: Tambahkan angka agar tidak kosong
+    col1, col2 = st.columns()
     
     with col1:
         st.info("👋 **Memulai Analisis:** Silakan unggah data observasi muka air laut (minimal 29 hari untuk hasil yang merepresentasikan siklus penuh) pada panel sebelah kiri.")
     with col2:
         st.success("💡 **Format yang didukung:** File CSV atau Excel dengan dua kolom utama: 'Waktu' dan 'Elevasi'.")
+        
         
 else:
     # 2. Header Status when File Uploaded
