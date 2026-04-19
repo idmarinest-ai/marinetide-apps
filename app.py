@@ -136,7 +136,9 @@ if not file:
         </div>
     """, unsafe_allow_html=True)
     
-    col1, col2 = st.columns()
+    # Berikan angka agar kolom kiri lebih lebar dari kolom kanan
+    col1, col2 = st.columns() 
+    
     with col1:
         st.info("👋 **Memulai Analisis:** Silakan unggah data observasi muka air laut (minimal 29 hari untuk hasil yang merepresentasikan siklus penuh) pada panel sebelah kiri.")
     with col2:
