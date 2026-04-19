@@ -73,7 +73,7 @@ st.markdown("""
 # ==========================================
 @st.cache_data
 def generate_template():
-    waktu = pd.date_range(start=datetime.now().strftime("%Y-%m-%d"), periods=24*30, freq="H")
+   waktu = pd.date_range(start=datetime.now().strftime("%Y-%m-%d"), periods=24*30, freq="h")
     t = np.arange(len(waktu))
     elev = 1.5 + 0.6*np.sin(2*np.pi*t/12.42) + 0.3*np.sin(2*np.pi*t/12.0) + \
            0.2*np.sin(2*np.pi*t/23.93) + 0.15*np.sin(2*np.pi*t/25.82) + 0.02*np.random.randn(len(t))
