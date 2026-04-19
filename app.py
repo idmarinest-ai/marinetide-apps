@@ -182,7 +182,7 @@ else:
             epoch_obj = t0.to_pydatetime()
             
             time_days_obs = (df["Waktu"] - t0).dt.total_seconds().values / 86400.0
-            waktu_prediksi = pd.date_range(start=t_end, periods=24 * hari_prediksi, freq="H")
+            waktu_prediksi = pd.date_range(start=t_end, periods=24 * hari_prediksi, freq="h")
             time_days_pred = (waktu_prediksi - t0).total_seconds().values / 86400.0
             
             elev = df["Elevasi"].values.astype(float)
