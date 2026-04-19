@@ -298,11 +298,19 @@ else:
             })
             
             # Styling Table Dataframe
-            st.dataframe(
-                res_df.style.background_gradient(cmap='Blues', subset=['Amplitudo (m)']).format(precision=4), 
-                use_container_width=True,
-                height=400
-            )
+          if HAS_MPL:
+    styled_df = res_df.style.background_gradient(
+        cmap='Blues',
+        subset=['Amplitudo (m)']
+    ).format(precision=4)
+else:
+    styled_df = res_df.round(4)
+
+st.dataframe(
+    styled_df,
+    use_container_width=True,
+    height=400
+)
 
     except Exception as e:
         st.error("Terjadi kesalahan pembacaan data. Pastikan format kolom CSV/Excel sesuai dengan template.")
