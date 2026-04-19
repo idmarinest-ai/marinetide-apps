@@ -141,7 +141,7 @@ if not file:
     """, unsafe_allow_html=True)
     
     # PERBAIKAN DI SINI: Tambahkan angka agar tidak kosong
-    col1, col2 = st.columns()
+    col1, col2 = st.columns([1, 1])
     
     with col1:
         st.info("👋 **Memulai Analisis:** Silakan unggah data observasi muka air laut (minimal 29 hari untuk hasil yang merepresentasikan siklus penuh) pada panel sebelah kiri.")
